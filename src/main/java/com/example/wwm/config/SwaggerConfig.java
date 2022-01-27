@@ -1,7 +1,10 @@
 package com.example.wwm.config;
 
+import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
+//import com.github.xiaoymin.swaggerbootstrapui.annotations.EnableSwaggerBootstrapUI;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -17,6 +20,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @Configuration
 @EnableSwagger2
+//@EnableSwaggerBootstrapUI
+@EnableKnife4j
 public class SwaggerConfig {
 
 
@@ -27,13 +32,16 @@ public class SwaggerConfig {
                 //.host("127.0.0.1:8080")                            //设置ip和端口，或者域名
                 .select()  //启动用于api选择的生成器
                 .apis(RequestHandlerSelectors.any())
-                // .apis(RequestHandlerSelectors.basePackage("cn.zwqh.springboot.controller"))//指定controller路径
-                .paths(PathSelectors.any()).build();
+                // .apis(RequestHandlerSelectors.basePackage("com.example.wwm.controller"))
+                // .apis(RequestHandlerSelectors.withClassAnnotation(RestController.class))
+                // .apis(RequestHandlerSelectors.basePackage("com.example.wwm.controller.TestController"))
+                .paths(PathSelectors.any())
+                .build();
     }
 
 
     private ApiInfo buildApiInf() {
-        Contact contact=new Contact("六月的北回归线","https://www.yuyanzhu.top/","weimingwu@linkcm.com");
+        Contact contact=new Contact("六月的北回归线","https://www.yuyanzhu.ming/","weimingwu@linkcm.com");
         return new ApiInfoBuilder()
                 .title("Swagger Demo Restful API Docs")    //文档标题
                 .description("Swagger Restful Api 文档")    //文档描述

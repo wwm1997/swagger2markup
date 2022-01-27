@@ -42,13 +42,25 @@
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
-            <version>2.9.2</version>
+            <version>3.0.0</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.9.2</version>
+        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/com.github.xiaoymin/knife4j-spring-boot-starter -->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
+            <version>3.0.3</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.github.xiaoymin</groupId>-->
+<!--            <artifactId>swagger-bootstrap-ui</artifactId>-->
+<!--            <version>1.9.6</version>-->
+<!--        </dependency>-->
+
 
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
@@ -186,10 +198,10 @@
                 </dependencies>
                 <configuration>
                     <sourceDirectory>./docs/asciidoc/generated</sourceDirectory>
-                    <outputDirectory>./docs/asciidoc/html</outputDirectory>
-                    <backend>html</backend>
-<!--                    <outputDirectory>./docs/asciidoc/pdf</outputDirectory>-->
-<!--                    <backend>pdf</backend>-->
+                    <!--<outputDirectory>./docs/asciidoc/html</outputDirectory>
+                    <backend>html</backend>-->
+                    <outputDirectory>./docs/asciidoc/pdf</outputDirectory>
+                    <backend>pdf</backend>
                     <headerFooter>true</headerFooter>
                     <doctype>book</doctype>
                     <sourceHighlighter>coderay</sourceHighlighter>
