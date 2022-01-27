@@ -1,0 +1,32 @@
+= Swagger Demo Restful API Docs
+
+
+[[_overview]]
+== 概览
+Swagger 示例 Restful Api 文档
+
+
+=== 版本信息
+[%hardbreaks]
+__版本__ : 1.0
+
+
+=== 联系方式
+[%hardbreaks]
+__名字__ : 朝雾轻寒
+__邮箱__ : weimingwu@linkcm.com
+
+
+=== URI scheme
+[%hardbreaks]
+__域名__ : localhost:8003
+__基础路径__ : /
+
+
+=== 标签
+
+* basic-error-controller : Basic Error Controller
+* 测试接口 : Test Controller
+
+
+
